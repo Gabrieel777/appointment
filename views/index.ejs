@@ -1,0 +1,30 @@
+<%- include("./partials/header.ejs") %>
+<%- include("./partials/homeNavbar.ejs")%>
+
+<body>
+    <hr>
+    <div class="jumbotron">
+        <h1 class="display-4" style="text-align: center;">Clínica Odontológica Julian's</h1>
+        <hr class="my-4">
+        <h2 style="text-align: center;"><span class="badge bg-primary">Está precisando marcar uma consulta ?</span></h2>
+    </div>
+
+    <div class="container card mt-4">
+
+        <div id="calendar"></div>
+        <hr>
+        <div class="card-header">
+            <h3>Marcar consulta </h3>
+        </div>
+        <div class="card-body">
+            <form action="makeappo"  method="POST"> 
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-block" type="submit">Marcar</button>
+                </div><br>
+            </form>
+        </div>
+    <div>
+</body>
+
+<%- include("./partials/homeFooter.ejs")%>
+

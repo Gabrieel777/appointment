@@ -1,0 +1,29 @@
+<%- include("../partials/header.ejs")%>
+<%- include("../partials/adminNavbar.ejs")%>
+
+<body>
+    <div class="container">
+        <br>
+        <h1>Lista de consultas</h1>
+        <hr>
+        <form action="/searchresult"  method="GET">
+            Pesquisar: <input type="search" name="search" id="search" placeholder="Digite o email ou o CPF">
+            <button class="btn btn-primary">Pesquisar</button>
+        </form>
+        <hr>
+        <h4>
+            <% appos.forEach(appo => { %>
+                <h4>Consulta: <%= appo.name %></h4>
+                <h4>Paciente: <%= appo.name %></h4>
+                <h4>Email: <%= appo.email %></h4>
+                <h4>CPF: <%= appo.cpf %></h4>
+                <h4>Data: <%= appo.date %> - <%= appo.time %> Horas</h4>
+                <h4>Finalizada: <% if(appo.finished){ %> Sim <% } else { %> Não <% } %></h4>
+                <hr>
+            <% }) %>
+        </h4>
+        <hr>
+    </div> 
+</body>
+
+<%- include("../partials/footer.ejs")%>

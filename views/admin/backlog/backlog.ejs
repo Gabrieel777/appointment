@@ -1,0 +1,31 @@
+<%- include("../../partials/header.ejs") %>
+<%- include("../../partials/adminNavbar.ejs") %>
+
+<div class="container">
+    <hr>
+    <div class="card mt-4">
+        <div class="card-header">
+            <h3>Vizualização - Consultas</h3>
+        </div>
+        <div class="card-body">
+            <form action="/joinAppo"  method="POST"> 
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-block" type="submit">Entrar</button>
+                </div><br>
+            </form>
+        </div>
+        <hr>
+        <div class="card-header">
+            <h3>Administação - Usuarios</h3>
+        </div>
+        <div class="card-body">
+            <form action="/joinUsers"  method="POST">
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-block" type="submit">Entrar</button>
+                </div><br>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include("../../partials/footer.ejs") %>
